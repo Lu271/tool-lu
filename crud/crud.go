@@ -33,7 +33,7 @@ func Init() cli.ActionFunc {
 			ModelPkgPath: modelPath,
 		})
 		var db *gorm.DB
-		if strings.ToLower(dbType) == "mysql " {
+		if strings.ToLower(dbType) == "mysql" {
 			db, _ = gorm.Open(mysql.Open(dsn))
 		}
 		g.UseDB(db)
